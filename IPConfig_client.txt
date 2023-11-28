@@ -1,0 +1,29 @@
+#Change to be done in w5500_spi.c
+
+#Sandfeed
+$Board1
+wiz_NetInfo gWIZNETINFO = { .mac = {0x00, 0x03, 0x09,0x05, 0x00, 0x03},
+                            .ip = {192, 168, 201, 51}, 
+                            .sn = {255,255,255,0}, 
+                            .gw = {192, 168, 100, 156}, 
+                            .dns = {4,2,2,2},
+                            .dhcp = NETINFO_STATIC };
+                            
+$Board2
+wiz_NetInfo gWIZNETINFO = { .mac = {0x00, 0x03, 0x09,0x05, 0x00, 0x03},
+                            .ip = {192, 168, 100, 131}, 
+                            .sn = {255,255,255,0}, 
+                            .gw = {192, 168, 100, 156}, 
+                            .dns = {4,2,2,2},
+                            .dhcp = NETINFO_STATIC };
+                          
+$Board3
+wiz_NetInfo gWIZNETINFO = { .mac = {0x00, 0x03, 0x09,0x05, 0x00, 0x03},
+                            .ip = {192, 168, 100, 131}, 
+                            .sn = {255,255,255,0}, 
+                            .gw = {192, 168, 100, 156}, 
+                            .dns = {4,2,2,2},
+                            .dhcp = NETINFO_STATIC };
+                            
+                            
+ #############Update BoardID in DisplayRoutine.h(when needed)###################                        

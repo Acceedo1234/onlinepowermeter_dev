@@ -1,0 +1,5 @@
+../Core/srccpp/BussinessLogic/ApplicationSW.cpp:50:1:Powermeter::Powermeter()	16	static
+../Core/srccpp/BussinessLogic/ApplicationSW.cpp:55:1:Powermeter::~Powermeter()	16	static
+../Core/srccpp/BussinessLogic/ApplicationSW.cpp:55:1:virtual Powermeter::~Powermeter()	16	static
+../Core/srccpp/BussinessLogic/ApplicationSW.cpp:59:6:void Powermeter::run()	16	static
+../Core/srccpp/BussinessLogic/ApplicationSW.cpp:64:6:void Powermeter::m_selectframedata()	16	static

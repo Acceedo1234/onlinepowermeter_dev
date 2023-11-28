@@ -1,0 +1,11 @@
+../Core/Src/W5500_C/httpClient.c:63:9:httpc_init	8	static
+../Core/Src/W5500_C/httpClient.c:166:9:httpc_connect	8	static
+../Core/Src/W5500_C/httpClient.c:183:10:httpc_add_customHeader_field	32	static
+../Core/Src/W5500_C/httpClient.c:202:10:httpc_send_header	40	static
+../Core/Src/W5500_C/httpClient.c:258:10:httpc_send_body	24	static
+../Core/Src/W5500_C/httpClient.c:291:10:httpc_send	48	static
+../Core/Src/W5500_C/httpClient.c:358:10:httpc_recv	8	static
+../Core/Src/W5500_C/httpClient.c:377:9:httpc_disconnect	8	static
+../Core/Src/W5500_C/httpClient.c:401:10:get_httpc_any_port	8	static
+../Core/Src/W5500_C/httpClient.c:92:9:httpc_connection_handler	16	static
+../Core/Src/W5500_C/httpClient.c:421:6:receivehttpcheck	24	static

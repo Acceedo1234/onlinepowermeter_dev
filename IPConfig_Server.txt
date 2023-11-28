@@ -1,0 +1,20 @@
+#Change to be done in httpClient.c & w5500_spi.c
+
+#Sandfeed
+httpClient.c
+static uint8_t dest_ip[4] = {192,168,6,20};
+static uint16_t dest_port =9001;
+
+w5500_spi.c
+uint8_t Domain_IP[4]  = {192,168,6,20};
+void initializeHttp(void)
+{
+	httpc_init(0, Domain_IP, 9001, g_send_buf, g_recv_buf);
+}
+
+"Host: 192.168.6.20:9001\r\n"[In URL]
+                            
+                            
+ 
+ 
+ #############Update BoardID in DisplayRoutine.h(when needed)###################                      

@@ -16,6 +16,7 @@ void W25qxx_EraseChip(void);
 void ESPRXDataSeg(void);
 void ReadOnlineData(void);
 void ethernetHTTPRoutine(void);
+void wiz5500Init(void);
 void initializeHttp(void);
 }
 
@@ -38,26 +39,21 @@ void cppMain()
 	OfflineStorage offlineStorageInst;
 //	ESP8266 esp8266Inst;
 //	SHIFT shiftInst;
-
+	offlineStorageInst.ReadOfflinedataInit();
 	displayRoutineInst.Init();
-//	offlineStorageInst.ReadOfflinedataInit();
-//	esp8266Inst.Init();
-//	ReadOnlineData();
+	wiz5500Init();
 	TxSeqComplete=1;
-
 
 	while(1)
 	{
-
 		if(Flag1MS)
 		{
 			Flag1MS=0;
-
 		}
 		if(Flag100milliSeconds)
 		{
 			Flag100milliSeconds=0;
-			//offlineStorageInst.run();
+			offlineStorageInst.run();
 			ModbusInst.ModbusReadTransaction();
 			ModbusInst.dwinDecoder();
 		}

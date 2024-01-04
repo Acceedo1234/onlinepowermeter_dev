@@ -33,6 +33,8 @@ public:
 
 	uint8_t u8ModbusRegister[8];
 	uint8_t u8DwinRegister[20];
+	uint8_t d;
+	uint8_t x;
 private:
 	uint8_t mTemperatureSensorId=1;
 	const uint8_t CRCArrayHigh[256] = {

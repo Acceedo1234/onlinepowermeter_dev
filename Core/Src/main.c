@@ -155,7 +155,6 @@ int main(void)
   HAL_Delay(2);
   HAL_GPIO_WritePin(GPIOA, GPIO_PIN_12, GPIO_PIN_SET);
   Meter_Id=1;
-  wiz5500Init();
 
   W25qxx_Init();
   HAL_UART_Receive_IT(&huart1,modbustemp,1);

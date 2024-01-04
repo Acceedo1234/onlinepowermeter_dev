@@ -21,10 +21,10 @@
 #define DATA_BUF_SIZE	2048
 
 wiz_NetInfo gWIZNETINFO = { .mac = {0x00, 0x03, 0x09,0x05, 0x00, 0x03},
-                            .ip = {192, 168, 0, 195},
+                            .ip = {192, 168, 0, 5},
                             .sn = {255,255,255,0},
-                            .gw = {0, 0, 0, 0},
-                            .dns = {0,0,0,0},
+                            .gw = {192, 168, 0, 1},
+                            .dns = {8,8,8,8},
                             .dhcp = NETINFO_STATIC };
 
 wiz_NetInfo checkgWIZNETINFO;
@@ -75,6 +75,8 @@ uint16_t remaining_duration_seq1,remaining_duration_seq2;
 uint8_t Meter_Id;
 uint16_t SizeOfDataURI,length1,length2,length3,length4,length5;
 uint16_t x,k,l;
+
+extern uint8_t Ip_config_Ip[4],Ip_Config_Subnet[4],Ip_config_gateway[4],Ip_config_DNS[4],Ip_config_Server[4];
 
 void processDHCP(void);
 
@@ -222,7 +224,20 @@ void wiz5500Init(void)
 	} while (tmp == PHY_LINK_OFF);
 	HAL_Delay(3000);
 	//getVERSIONR();
+	gWIZNETINFO.ip[0]=Ip_config_Ip[0];
+	gWIZNETINFO.ip[1]=Ip_config_Ip[1];
+	gWIZNETINFO.ip[2]=Ip_config_Ip[2];
+	gWIZNETINFO.ip[3]=Ip_config_Ip[3];
 
+	gWIZNETINFO.sn[0]=Ip_Config_Subnet[0];
+	gWIZNETINFO.sn[1]=Ip_Config_Subnet[1];
+	gWIZNETINFO.sn[2]=Ip_Config_Subnet[2];
+	gWIZNETINFO.sn[3]=Ip_Config_Subnet[3];
+
+	gWIZNETINFO.gw[0]=Ip_config_gateway[0];
+	gWIZNETINFO.gw[1]=Ip_config_gateway[1];
+	gWIZNETINFO.gw[2]=Ip_config_gateway[2];
+	gWIZNETINFO.gw[3]=Ip_config_gateway[3];
 	wizchip_setnetinfo(&gWIZNETINFO);
 	HAL_Delay(1000);
 
@@ -265,7 +280,11 @@ void processDHCP(void)
 
 void initializeHttp(void)
 {
-	httpc_init(0, Domain_name, 9004, g_send_buf, g_recv_buf);
+	Domain_IP[0] = Ip_config_Server[0];
+	Domain_IP[1] = Ip_config_Server[1];
+	Domain_IP[2] = Ip_config_Server[2];
+	Domain_IP[3] = Ip_config_Server[3];
+	httpc_init(0, Domain_IP, 9004, g_send_buf, g_recv_buf);
 }
 
 void ethernetHTTPRoutine(void)

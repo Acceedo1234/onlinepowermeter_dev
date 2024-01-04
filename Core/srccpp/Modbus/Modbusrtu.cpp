@@ -29,6 +29,8 @@ extern uint8_t Rx_Dwin_Point;
 extern struct ModbusRegValue MeterInfo[16];
 extern uint8_t RxDatabuf[50];
 extern uint8_t httpc_isConnected;
+extern uint8_t Rx_Dwin_Complete;
+extern uint8_t Rx_Dwin_Data_Buff[50];
 
 uint8_t test;
 uint8_t u8ModbusReg[8];
@@ -39,6 +41,10 @@ uint8_t CurrentFrame=1;
 uint8_t noOfDataDwin;
 uint16_t RxNoOfData;
 uint16_t Valid_No_Of_Data;
+uint8_t Ip_config_Ip[4],Ip_Config_Subnet[4],Ip_config_gateway[4],Ip_config_DNS[4],Ip_config_Server[4];
+uint8_t Update_Dwin_Set_Data;
+uint16_t Ip_config_Server_Port;
+uint8_t No_Of_Meter;
 
 Modbusrtu::Modbusrtu() {
 	// TODO Auto-generated constructor stub
@@ -185,4 +191,43 @@ void Modbusrtu::dwinFrame(void)
 	}
 	//out_read_rxint_set.Noofbytesrx = (_u16ReadQty*2)+5;
 	HAL_UART_Transmit_IT(&hlpuart1,u8DwinRegister,noOfDataDwin);
+}
+
+void Modbusrtu::dwinDecoder(void)
+{
+	if(Rx_Dwin_Complete == 0){return;}
+		Rx_Dwin_Complete=0;
+
+		if(Rx_Dwin_Data_Buff[43] !=0 )
+		{
+			Ip_config_Ip[0] = Rx_Dwin_Data_Buff[1];
+			Ip_config_Ip[1] = Rx_Dwin_Data_Buff[3];
+			Ip_config_Ip[2] = Rx_Dwin_Data_Buff[5];
+			Ip_config_Ip[3] = Rx_Dwin_Data_Buff[7];
+
+			Ip_Config_Subnet[0] = Rx_Dwin_Data_Buff[9];
+			Ip_Config_Subnet[1] = Rx_Dwin_Data_Buff[11];
+			Ip_Config_Subnet[2] = Rx_Dwin_Data_Buff[13];
+			Ip_Config_Subnet[3] = Rx_Dwin_Data_Buff[15];
+
+			Ip_config_gateway[0] = Rx_Dwin_Data_Buff[17];
+			Ip_config_gateway[1] = Rx_Dwin_Data_Buff[19];
+			Ip_config_gateway[2] = Rx_Dwin_Data_Buff[21];
+			Ip_config_gateway[3] = Rx_Dwin_Data_Buff[23];
+
+			Ip_config_DNS[0] = Rx_Dwin_Data_Buff[25];
+			Ip_config_DNS[1] = Rx_Dwin_Data_Buff[27];
+			Ip_config_DNS[2] = Rx_Dwin_Data_Buff[29];
+			Ip_config_DNS[3] = Rx_Dwin_Data_Buff[31];
+
+			Ip_config_Server[0] = Rx_Dwin_Data_Buff[33];
+			Ip_config_Server[1] = Rx_Dwin_Data_Buff[35];
+			Ip_config_Server[2] = Rx_Dwin_Data_Buff[37];
+			Ip_config_Server[3] = Rx_Dwin_Data_Buff[39];
+
+			Ip_config_Server_Port = ((Rx_Dwin_Data_Buff[40]<<8)|(Rx_Dwin_Data_Buff[41]));
+
+			No_Of_Meter 		= Rx_Dwin_Data_Buff[43];
+			Update_Dwin_Set_Data =1;
+		}
 }

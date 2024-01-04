@@ -59,6 +59,7 @@ void cppMain()
 			Flag100milliSeconds=0;
 			//offlineStorageInst.run();
 			ModbusInst.ModbusReadTransaction();
+			ModbusInst.dwinDecoder();
 		}
 		if(Flag1Second)
 		{

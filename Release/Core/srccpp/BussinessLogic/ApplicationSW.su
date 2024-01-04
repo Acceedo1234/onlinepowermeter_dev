@@ -1,5 +1,11 @@
-../Core/srccpp/BussinessLogic/ApplicationSW.cpp:55:1:Powermeter::~Powermeter()	0	static
-../Core/srccpp/BussinessLogic/ApplicationSW.cpp:55:1:virtual Powermeter::~Powermeter()	8	static
-../Core/srccpp/BussinessLogic/ApplicationSW.cpp:50:1:Powermeter::Powermeter()	0	static
-../Core/srccpp/BussinessLogic/ApplicationSW.cpp:59:6:void Powermeter::run()	0	static
-../Core/srccpp/BussinessLogic/ApplicationSW.cpp:64:6:void Powermeter::m_selectframedata()	0	static
+../Core/srccpp/BussinessLogic/ApplicationSW.cpp:56:1:Loadmeasure::~Loadmeasure()	0	static
+../Core/srccpp/BussinessLogic/ApplicationSW.cpp:56:1:virtual Loadmeasure::~Loadmeasure()	8	static
+../Core/srccpp/BussinessLogic/ApplicationSW.cpp:51:1:Loadmeasure::Loadmeasure()	0	static
+../Core/srccpp/BussinessLogic/ApplicationSW.cpp:71:6:void Loadmeasure::inputBasedTrigger()	8	static
+../Core/srccpp/BussinessLogic/ApplicationSW.cpp:102:10:uint32_t Loadmeasure::calculationCarbonWeight()	0	static
+../Core/srccpp/BussinessLogic/ApplicationSW.cpp:126:10:uint32_t Loadmeasure::calculationSilicaWeight()	0	static
+../Core/srccpp/BussinessLogic/ApplicationSW.cpp:151:10:uint32_t Loadmeasure::calculationManganeaseWeight()	8	static
+../Core/srccpp/BussinessLogic/ApplicationSW.cpp:175:10:uint32_t Loadmeasure::calculationCopperWeight()	8	static
+../Core/srccpp/BussinessLogic/ApplicationSW.cpp:199:10:uint32_t Loadmeasure::calculationTinWeight()	0	static
+../Core/srccpp/BussinessLogic/ApplicationSW.cpp:224:10:uint32_t Loadmeasure::calculationZincWeight()	0	static
+../Core/srccpp/BussinessLogic/ApplicationSW.cpp:60:6:void Loadmeasure::run()	8	static

@@ -1,5 +1,5 @@
 Core/srccpp/main.o: ../Core/srccpp/main.cpp \
- D:/PROGRAM/Naveen/Powermeter/Sandfits_9-08-2023/Sandfits_09-08-2023/Core/srccpp/BussinessLogic/ApplicationSW.h \
+ E:/naveen\ Work\ space/Power\ Meter/stm32_dev/powermeter_06_05_23_B1/Core/srccpp/BussinessLogic/ApplicationSW.h \
  ../Core/Inc/main.h ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h \
  ../Core/Inc/stm32l4xx_hal_conf.h \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rcc.h \
@@ -32,15 +32,15 @@ Core/srccpp/main.o: ../Core/srccpp/main.cpp \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_tim_ex.h \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart.h \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart_ex.h \
- D:/PROGRAM/Naveen/Powermeter/Sandfits_9-08-2023/Sandfits_09-08-2023/Core/srccpp/DisplayCPP/GLCD.h \
- D:/PROGRAM/Naveen/Powermeter/Sandfits_9-08-2023/Sandfits_09-08-2023/Core/srccpp/Common/common.h \
- D:/PROGRAM/Naveen/Powermeter/Sandfits_9-08-2023/Sandfits_09-08-2023/Core/srccpp/Modbus/Modbusrtu.h \
- D:/PROGRAM/Naveen/Powermeter/Sandfits_9-08-2023/Sandfits_09-08-2023/Core/srccpp/DisplayCPP/DisplayRoutine.h \
- D:/PROGRAM/Naveen/Powermeter/Sandfits_9-08-2023/Sandfits_09-08-2023/Core/srccpp/DisplayCPP/GLCD.h \
- D:/PROGRAM/Naveen/Powermeter/Sandfits_9-08-2023/Sandfits_09-08-2023/Core/srccpp/OfflineStorage/OfflineStorage.h \
- D:/PROGRAM/Naveen/Powermeter/Sandfits_9-08-2023/Sandfits_09-08-2023/Core/srccpp/WifiEsp8266/ESP8266.h \
- D:/PROGRAM/Naveen/Powermeter/Sandfits_9-08-2023/Sandfits_09-08-2023/Core/srccpp/Shift/SHIFT.h
-D:/PROGRAM/Naveen/Powermeter/Sandfits_9-08-2023/Sandfits_09-08-2023/Core/srccpp/BussinessLogic/ApplicationSW.h:
+ E:/naveen\ Work\ space/Power\ Meter/stm32_dev/powermeter_06_05_23_B1/Core/srccpp/DisplayCPP/GLCD.h \
+ E:/naveen\ Work\ space/Power\ Meter/stm32_dev/powermeter_06_05_23_B1/Core/srccpp/Common/common.h \
+ E:/naveen\ Work\ space/Power\ Meter/stm32_dev/powermeter_06_05_23_B1/Core/srccpp/Modbus/Modbusrtu.h \
+ E:/naveen\ Work\ space/Power\ Meter/stm32_dev/powermeter_06_05_23_B1/Core/srccpp/DisplayCPP/DisplayRoutine.h \
+ E:/naveen\ Work\ space/Power\ Meter/stm32_dev/powermeter_06_05_23_B1/Core/srccpp/DisplayCPP/GLCD.h \
+ E:/naveen\ Work\ space/Power\ Meter/stm32_dev/powermeter_06_05_23_B1/Core/srccpp/OfflineStorage/OfflineStorage.h \
+ E:/naveen\ Work\ space/Power\ Meter/stm32_dev/powermeter_06_05_23_B1/Core/srccpp/WifiEsp8266/ESP8266.h \
+ E:/naveen\ Work\ space/Power\ Meter/stm32_dev/powermeter_06_05_23_B1/Core/srccpp/Shift/SHIFT.h
+E:/naveen\ Work\ space/Power\ Meter/stm32_dev/powermeter_06_05_23_B1/Core/srccpp/BussinessLogic/ApplicationSW.h:
 ../Core/Inc/main.h:
 ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h:
 ../Core/Inc/stm32l4xx_hal_conf.h:
@@ -74,11 +74,11 @@ D:/PROGRAM/Naveen/Powermeter/Sandfits_9-08-2023/Sandfits_09-08-2023/Core/srccpp/
 ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_tim_ex.h:
 ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart.h:
 ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart_ex.h:
-D:/PROGRAM/Naveen/Powermeter/Sandfits_9-08-2023/Sandfits_09-08-2023/Core/srccpp/DisplayCPP/GLCD.h:
-D:/PROGRAM/Naveen/Powermeter/Sandfits_9-08-2023/Sandfits_09-08-2023/Core/srccpp/Common/common.h:
-D:/PROGRAM/Naveen/Powermeter/Sandfits_9-08-2023/Sandfits_09-08-2023/Core/srccpp/Modbus/Modbusrtu.h:
-D:/PROGRAM/Naveen/Powermeter/Sandfits_9-08-2023/Sandfits_09-08-2023/Core/srccpp/DisplayCPP/DisplayRoutine.h:
-D:/PROGRAM/Naveen/Powermeter/Sandfits_9-08-2023/Sandfits_09-08-2023/Core/srccpp/DisplayCPP/GLCD.h:
-D:/PROGRAM/Naveen/Powermeter/Sandfits_9-08-2023/Sandfits_09-08-2023/Core/srccpp/OfflineStorage/OfflineStorage.h:
-D:/PROGRAM/Naveen/Powermeter/Sandfits_9-08-2023/Sandfits_09-08-2023/Core/srccpp/WifiEsp8266/ESP8266.h:
-D:/PROGRAM/Naveen/Powermeter/Sandfits_9-08-2023/Sandfits_09-08-2023/Core/srccpp/Shift/SHIFT.h:
+E:/naveen\ Work\ space/Power\ Meter/stm32_dev/powermeter_06_05_23_B1/Core/srccpp/DisplayCPP/GLCD.h:
+E:/naveen\ Work\ space/Power\ Meter/stm32_dev/powermeter_06_05_23_B1/Core/srccpp/Common/common.h:
+E:/naveen\ Work\ space/Power\ Meter/stm32_dev/powermeter_06_05_23_B1/Core/srccpp/Modbus/Modbusrtu.h:
+E:/naveen\ Work\ space/Power\ Meter/stm32_dev/powermeter_06_05_23_B1/Core/srccpp/DisplayCPP/DisplayRoutine.h:
+E:/naveen\ Work\ space/Power\ Meter/stm32_dev/powermeter_06_05_23_B1/Core/srccpp/DisplayCPP/GLCD.h:
+E:/naveen\ Work\ space/Power\ Meter/stm32_dev/powermeter_06_05_23_B1/Core/srccpp/OfflineStorage/OfflineStorage.h:
+E:/naveen\ Work\ space/Power\ Meter/stm32_dev/powermeter_06_05_23_B1/Core/srccpp/WifiEsp8266/ESP8266.h:
+E:/naveen\ Work\ space/Power\ Meter/stm32_dev/powermeter_06_05_23_B1/Core/srccpp/Shift/SHIFT.h:

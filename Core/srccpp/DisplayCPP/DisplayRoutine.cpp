@@ -30,9 +30,26 @@ void DisplayRoutine::run()
 {
 	//m_gLCDDrive.m_clrlcd();/*  Try in local if not need comment out*/
 	m_gLCDDrive.m_lcdputs1(0,1,Lpdc);
+	value2Digit(hour_t,2,0);
+	m_gLCDDrive.m_lcdputs1(15,2,colon);
+	value2Digit(min_t,2,20);
+	m_gLCDDrive.m_lcdputs1(35,2,colon);
+	value2Digit(sec_t,2,40);
+	m_gLCDDrive.m_lcdputs1(54,2,space);
+	value2Digit(date_Rtc,2,65);
+	m_gLCDDrive.m_lcdputs1(81,2,backslash);
+	value2Digit(month_Rtc,2,86);
+	m_gLCDDrive.m_lcdputs1(103,2,backslash);
+	value2Digit(year_Rtc,2,110);
 	m_gLCDDrive.m_lcdputs1(0,3,production);
+	value4Digit(MAC_Gen_Prod_Input1_Production,3,85);
 	m_gLCDDrive.m_lcdputs1(0,4,rejection);
-	m_gLCDDrive.m_lcdputs1(0,7,boardID);
+	value4Digit(MAC_Gen_Rej_Input_Production,4,85);
+	m_gLCDDrive.m_lcdputs1(0,5,Mrejection);
+	value4Digit(Manual_RejectionCount,5,85);
+	value4Digit(wifi_command,6,0);
+	m_gLCDDrive.m_lcdputs1(40,6,space);
+	value4Digit(SectorPos,6,80);
 
 }
 

@@ -91,8 +91,8 @@ all: main-build
 main-build: powermeter.elf secondary-outputs
 
 # Tool invocations
-powermeter.elf powermeter.map: $(OBJS) $(USER_OBJS) D:\SourceTree\onlinepowermerter\STM32L433RCTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-g++ -o "powermeter.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"D:\SourceTree\onlinepowermerter\STM32L433RCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="powermeter.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+powermeter.elf powermeter.map: $(OBJS) $(USER_OBJS) D:\PROGRAM\Naveen\Powermeter\indo\ shell\ 06_22_2023\powermeter_22_06_23_B1\STM32L433RCTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-g++ -o "powermeter.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"D:\PROGRAM\Naveen\Powermeter\indo shell 06_22_2023\powermeter_22_06_23_B1\STM32L433RCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="powermeter.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

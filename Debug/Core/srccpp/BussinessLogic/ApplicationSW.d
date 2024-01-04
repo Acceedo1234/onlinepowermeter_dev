@@ -1,7 +1,7 @@
 Core/srccpp/BussinessLogic/ApplicationSW.o: \
  ../Core/srccpp/BussinessLogic/ApplicationSW.cpp \
  ../Core/Inc/Struct_Input_output.h \
- D:/SourceTree/onlinepowermerter/Core/srccpp/BussinessLogic/ApplicationSW.h \
+ D:/PROGRAM/Naveen/Powermeter/indo\ shell\ 06_22_2023/powermeter_22_06_23_B1/Core/srccpp/BussinessLogic/ApplicationSW.h \
  ../Core/Inc/main.h ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h \
  ../Core/Inc/stm32l4xx_hal_conf.h \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rcc.h \
@@ -35,7 +35,7 @@ Core/srccpp/BussinessLogic/ApplicationSW.o: \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart.h \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart_ex.h
 ../Core/Inc/Struct_Input_output.h:
-D:/SourceTree/onlinepowermerter/Core/srccpp/BussinessLogic/ApplicationSW.h:
+D:/PROGRAM/Naveen/Powermeter/indo\ shell\ 06_22_2023/powermeter_22_06_23_B1/Core/srccpp/BussinessLogic/ApplicationSW.h:
 ../Core/Inc/main.h:
 ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h:
 ../Core/Inc/stm32l4xx_hal_conf.h:

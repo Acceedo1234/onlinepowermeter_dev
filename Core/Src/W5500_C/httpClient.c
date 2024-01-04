@@ -14,7 +14,7 @@
 #include "socket.h"
 #include "httpClient.h"
 
-struct ModbusRegValue MeterInfo[20];
+struct ModbusRegValue MeterInfo[16];
 
 /* Private define ------------------------------------------------------------*/
 
@@ -25,8 +25,8 @@ uint8_t * httpc_recv_buf;
 HttpRequest request = HttpRequest_get_initializer;
 
 static int8_t httpsock = 0;
-static uint8_t dest_ip[4] = {192,168,201,51};
-static uint16_t dest_port =9010;
+static uint8_t dest_ip[4] = {122,165,215,149};//122.165.215.149
+static uint16_t dest_port =9004;
 static uint16_t httpc_any_port = 0;
 
 uint8_t httpc_isSockOpen = HTTPC_FALSE;
@@ -497,7 +497,7 @@ void receivehttpcheck(void)
 			pch = strtok (0,",");
 		}
 
-		Total_No_Of_Meter = 16;/*modify manual*/
+		Total_No_Of_Meter = 9;/*modify manual*/
 		if(Meter_Id_Rx == Total_No_Of_Meter)
 		{
 			Meter_Id =1;

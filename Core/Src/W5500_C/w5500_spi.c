@@ -21,10 +21,10 @@
 #define DATA_BUF_SIZE	2048
 
 wiz_NetInfo gWIZNETINFO = { .mac = {0x00, 0x03, 0x09,0x05, 0x00, 0x03},
-                            .ip = {192, 168, 201, 54}, //192.168.100.131
-                            .sn = {255,255,255,0}, //255.255.255.0
-                            .gw = {192, 168, 201, 1}, //192.168.100.156
-                            .dns = {4,2,2,2},//4.2.2.2
+                            .ip = {192, 168, 0, 195},
+                            .sn = {255,255,255,0},
+                            .gw = {0, 0, 0, 0},
+                            .dns = {0,0,0,0},
                             .dhcp = NETINFO_STATIC };
 
 wiz_NetInfo checkgWIZNETINFO;
@@ -47,10 +47,10 @@ uint8_t dhcp_buffer [ 1024 ] ;
 uint8_t dns_buffer [ 1024 ] ;
 
 //uint8_t Domain_IP[4]  = {20,187,110,12};
-uint8_t Domain_IP[4]  = {192,168,201,51};
-//uint8_t Domain_IP[4]  = {0,0,0,0};
+//uint8_t Domain_IP[4]  = {192,168,0,121};
+uint8_t Domain_IP[4]  = {122,165,215,149};
 
-uint8_t Domain_name[] = "power-meter.acceedo.in";//
+uint8_t Domain_name[] = "isc2.power-meter.acceedo.in";//
 //uint8_t URI[] = "http://usm3-ht.acceedo.in:9005/set_temp?u=5&p=00000001&tm=0030&tl=0320&th=0030&h=030&l=080&ht=070&lt=080&rv=0130&bv=0650&yv=1230&rc=2705&bc=2909&yc=0500&k=203040&x=1";
 //uint8_t URI[] = "/search?ei=BkGsXL63AZiB-QaJ8KqoAQ&q=W6100&oq=W6100&gs_l=psy-ab.3...0.0..6208...0.0..0.0.0.......0......gws-wiz.eWEWFN8TORw";
 uint8_t URI[500];
@@ -227,7 +227,7 @@ void wiz5500Init(void)
 	HAL_Delay(1000);
 
 
-	//processDHCP();
+//	processDHCP();
 
 	wizchip_getnetinfo(&checkgWIZNETINFO);
 
@@ -265,7 +265,7 @@ void processDHCP(void)
 
 void initializeHttp(void)
 {
-	httpc_init(0, Domain_IP, 9010, g_send_buf, g_recv_buf);
+	httpc_init(0, Domain_name, 9004, g_send_buf, g_recv_buf);
 }
 
 void ethernetHTTPRoutine(void)
@@ -313,8 +313,8 @@ void ethernetHTTPRoutine(void)
 		}
 #endif
 
-		length1 = sprintf(URI,"POST /powermeter?mid=%d&bid=3 HTTP/1.0\r\n"
-						"Host: 192.168.201.51:9010\r\n"
+		length1 = sprintf(URI,"POST /powermeter?mid=%d&bid=1 HTTP/1.0\r\n"
+						"Host: isc2.power-meter.acceedo.in:9004\r\n"
 						"Accept: text/html\r\n"
 						"Content-Type: application/json \r\n"
 						"Content-Length: %d\r\n\r\n"

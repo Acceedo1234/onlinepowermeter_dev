@@ -33,7 +33,7 @@ Core/Src/W5500_C/httpClient.o: ../Core/Src/W5500_C/httpClient.c \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart.h \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart_ex.h \
  ../Core/Src/W5500_C/wizchip_conf.h ../Core/Src/W5500_C/W5500/w5500.h \
- D:/SourceTree/onlinepowermerter/Core/Src/W5500_C/wizchip_conf.h \
+ D:/PROGRAM/Naveen/Powermeter/indo\ shell\ 06_22_2023/powermeter_22_06_23_B1/Core/Src/W5500_C/wizchip_conf.h \
  ../Core/Src/W5500_C/socket.h ../Core/Src/W5500_C/httpClient.h
 ../Core/Inc/struct.h:
 ../Core/Inc/main.h:
@@ -71,6 +71,6 @@ Core/Src/W5500_C/httpClient.o: ../Core/Src/W5500_C/httpClient.c \
 ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart_ex.h:
 ../Core/Src/W5500_C/wizchip_conf.h:
 ../Core/Src/W5500_C/W5500/w5500.h:
-D:/SourceTree/onlinepowermerter/Core/Src/W5500_C/wizchip_conf.h:
+D:/PROGRAM/Naveen/Powermeter/indo\ shell\ 06_22_2023/powermeter_22_06_23_B1/Core/Src/W5500_C/wizchip_conf.h:
 ../Core/Src/W5500_C/socket.h:
 ../Core/Src/W5500_C/httpClient.h:

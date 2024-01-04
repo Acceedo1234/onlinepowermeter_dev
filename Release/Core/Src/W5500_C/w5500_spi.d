@@ -32,11 +32,11 @@ Core/Src/W5500_C/w5500_spi.o: ../Core/Src/W5500_C/w5500_spi.c \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart.h \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart_ex.h \
  ../Core/Src/W5500_C/wizchip_conf.h ../Core/Src/W5500_C/W5500/w5500.h \
- D:/PROGRAM/Naveen/Powermeter/Sandfits_9-08-2023/Sandfits_09-08-2023/Core/Src/W5500_C/wizchip_conf.h \
+ E:/naveen\ Work\ space/Power\ Meter/stm32_dev/powermeter_06_05_23_B1/Core/Src/W5500_C/wizchip_conf.h \
  ../Core/Src/W5500_C/socket.h \
- D:/PROGRAM/Naveen/Powermeter/Sandfits_9-08-2023/Sandfits_09-08-2023/Core/Src/Internet/DHCP/dhcp.h \
- D:/PROGRAM/Naveen/Powermeter/Sandfits_9-08-2023/Sandfits_09-08-2023/Core/Src/Internet/DNS/dns.h \
- ../Core/Src/W5500_C/httpClient.h ../Core/Inc/struct.h ../Core/Inc/main.h
+ E:/naveen\ Work\ space/Power\ Meter/stm32_dev/powermeter_06_05_23_B1/Core/Src/Internet/DHCP/dhcp.h \
+ E:/naveen\ Work\ space/Power\ Meter/stm32_dev/powermeter_06_05_23_B1/Core/Src/Internet/DNS/dns.h \
+ ../Core/Src/W5500_C/httpClient.h
 ../Core/Inc/main.h:
 ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h:
 ../Core/Inc/stm32l4xx_hal_conf.h:
@@ -72,10 +72,8 @@ Core/Src/W5500_C/w5500_spi.o: ../Core/Src/W5500_C/w5500_spi.c \
 ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart_ex.h:
 ../Core/Src/W5500_C/wizchip_conf.h:
 ../Core/Src/W5500_C/W5500/w5500.h:
-D:/PROGRAM/Naveen/Powermeter/Sandfits_9-08-2023/Sandfits_09-08-2023/Core/Src/W5500_C/wizchip_conf.h:
+E:/naveen\ Work\ space/Power\ Meter/stm32_dev/powermeter_06_05_23_B1/Core/Src/W5500_C/wizchip_conf.h:
 ../Core/Src/W5500_C/socket.h:
-D:/PROGRAM/Naveen/Powermeter/Sandfits_9-08-2023/Sandfits_09-08-2023/Core/Src/Internet/DHCP/dhcp.h:
-D:/PROGRAM/Naveen/Powermeter/Sandfits_9-08-2023/Sandfits_09-08-2023/Core/Src/Internet/DNS/dns.h:
+E:/naveen\ Work\ space/Power\ Meter/stm32_dev/powermeter_06_05_23_B1/Core/Src/Internet/DHCP/dhcp.h:
+E:/naveen\ Work\ space/Power\ Meter/stm32_dev/powermeter_06_05_23_B1/Core/Src/Internet/DNS/dns.h:
 ../Core/Src/W5500_C/httpClient.h:
-../Core/Inc/struct.h:
-../Core/Inc/main.h:

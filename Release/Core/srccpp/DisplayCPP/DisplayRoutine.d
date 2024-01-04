@@ -2,7 +2,7 @@ Core/srccpp/DisplayCPP/DisplayRoutine.o: \
  ../Core/srccpp/DisplayCPP/DisplayRoutine.cpp \
  ../Core/srccpp/DisplayCPP/DisplayRoutine.h \
  ../Core/srccpp/DisplayCPP/GLCD.h \
- D:/PROGRAM/Naveen/Powermeter/Sandfits_9-08-2023/Sandfits_09-08-2023/Core/srccpp/Common/common.h \
+ E:/naveen\ Work\ space/Power\ Meter/stm32_dev/powermeter_06_05_23_B1/Core/srccpp/Common/common.h \
  ../Core/Inc/main.h ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h \
  ../Core/Inc/stm32l4xx_hal_conf.h \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rcc.h \
@@ -37,7 +37,7 @@ Core/srccpp/DisplayCPP/DisplayRoutine.o: \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart_ex.h
 ../Core/srccpp/DisplayCPP/DisplayRoutine.h:
 ../Core/srccpp/DisplayCPP/GLCD.h:
-D:/PROGRAM/Naveen/Powermeter/Sandfits_9-08-2023/Sandfits_09-08-2023/Core/srccpp/Common/common.h:
+E:/naveen\ Work\ space/Power\ Meter/stm32_dev/powermeter_06_05_23_B1/Core/srccpp/Common/common.h:
 ../Core/Inc/main.h:
 ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h:
 ../Core/Inc/stm32l4xx_hal_conf.h:

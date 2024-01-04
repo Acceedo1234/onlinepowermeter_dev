@@ -19,10 +19,13 @@ public:
 
 private:
 	GLCD m_gLCDDrive;
-	unsigned char Lpdc[15]="   POWERMETER";
-	unsigned char production[21]="No of METER:16";
-	unsigned char rejection[21] ="192.168.201.54";
-	unsigned char boardID[13]="BoardId:3";
+	unsigned char Lpdc[15]="      LPDC   ";
+	unsigned char colon[2]=":";
+	unsigned char space[4]="  ";
+	unsigned char backslash[2]="/";
+	unsigned char production[13]="Production:";
+	unsigned char rejection[13] ="Rejection :";
+	unsigned char Mrejection[13]="MRejection:";
 	void value2Digit(uint8_t value,uint8_t posLine,uint8_t posCol);
 	void value4Digit(uint16_t value4dig,uint8_t posLine,uint8_t posCol);
 	uint8_t GLCDNumericArray[2];

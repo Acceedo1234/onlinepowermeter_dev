@@ -45,6 +45,8 @@ uint8_t Ip_config_Ip[4],Ip_Config_Subnet[4],Ip_config_gateway[4],Ip_config_DNS[4
 uint8_t Update_Dwin_Set_Data;
 uint16_t Ip_config_Server_Port;
 uint8_t No_Of_Meter;
+uint16_t Ip_config_Server_Port_K1;
+uint8_t No_Of_Meter_K1;
 
 Modbusrtu::Modbusrtu() {
 	// TODO Auto-generated constructor stub
@@ -255,8 +257,17 @@ void Modbusrtu::dwinDecoder(void)
 			Ip_config_Server[1] = Rx_Dwin_Data_Buff[35];
 			Ip_config_Server[2] = Rx_Dwin_Data_Buff[37];
 			Ip_config_Server[3] = Rx_Dwin_Data_Buff[39];
-
-			Ip_config_Server_Port = ((Rx_Dwin_Data_Buff[40]<<8)|(Rx_Dwin_Data_Buff[41]));
-			No_Of_Meter 		= Rx_Dwin_Data_Buff[43];
+			Ip_config_Server_Port_K1 = ((Rx_Dwin_Data_Buff[40]<<8)|(Rx_Dwin_Data_Buff[41]));
+			if(Ip_config_Server_Port != Ip_config_Server_Port_K1)
+			{
+				Ip_config_Server_Port = Ip_config_Server_Port_K1;
+				Update_Dwin_Set_Data =1;
+			}
+			No_Of_Meter_K1 		= Rx_Dwin_Data_Buff[43];
+			if(No_Of_Meter != No_Of_Meter_K1)
+			{
+				No_Of_Meter 		= No_Of_Meter_K1;
+				Update_Dwin_Set_Data =1;
+			}
 		}
 }

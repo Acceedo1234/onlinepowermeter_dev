@@ -28,6 +28,9 @@ extern uint8_t Ip_config_Ip[4],Ip_Config_Subnet[4],Ip_config_gateway[4],Ip_confi
 extern uint16_t Ip_config_Server_Port;
 /*check for change in data*/
 extern uint8_t Update_Dwin_Set_Data;
+extern uint8_t No_Of_Meter;
+extern uint16_t Ip_config_Server_Port_K1;
+extern uint8_t No_Of_Meter_K1;
 
 
 OfflineStorage::OfflineStorage() {
@@ -77,13 +80,15 @@ void OfflineStorage::m_writesetdata(){
 
 			m_writeDwinBuf[20] = (unsigned char)(Ip_config_Server_Port>>8)&0x00ff;
 			m_writeDwinBuf[21] = (unsigned char)(Ip_config_Server_Port)&0x00ff;
-			W25qxx_WriteSector(m_writeDwinBuf,100,0,22);
+
+			m_writeDwinBuf[22] = No_Of_Meter;
+			W25qxx_WriteSector(m_writeDwinBuf,100,0,23);
 		}
 }
 
 
 void OfflineStorage::m_readsetdata(){
-	W25qxx_ReadSector(m_readFlashBuf,100,0,22);
+	W25qxx_ReadSector(m_readFlashBuf,100,0,23);
 
 		 Ip_config_Ip[0] = m_readFlashBuf[0];
 		 Ip_config_Ip[1] = m_readFlashBuf[1];
@@ -110,7 +115,10 @@ void OfflineStorage::m_readsetdata(){
 		 Ip_config_Server[2] = m_readFlashBuf[18];
 		 Ip_config_Server[3] = m_readFlashBuf[19];
 
-		 Ip_config_Server_Port = ((m_readFlashBuf[20]<<8)|(m_readFlashBuf[21]));
+		 Ip_config_Server_Port 		= ((m_readFlashBuf[20]<<8)|(m_readFlashBuf[21]));
+		 Ip_config_Server_Port_K1 	= Ip_config_Server_Port;
+		 No_Of_Meter 				= m_readFlashBuf[22];
+		 No_Of_Meter_K1 			= No_Of_Meter;
 }
 
 void OfflineStorage::ReadOfflinedataInit()

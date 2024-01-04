@@ -77,6 +77,8 @@ uint16_t SizeOfDataURI,length1,length2,length3,length4,length5;
 uint16_t x,k,l;
 
 extern uint8_t Ip_config_Ip[4],Ip_Config_Subnet[4],Ip_config_gateway[4],Ip_config_DNS[4],Ip_config_Server[4];
+extern uint16_t Ip_config_Server_Port;
+
 
 void processDHCP(void);
 
@@ -284,7 +286,8 @@ void initializeHttp(void)
 	Domain_IP[1] = Ip_config_Server[1];
 	Domain_IP[2] = Ip_config_Server[2];
 	Domain_IP[3] = Ip_config_Server[3];
-	httpc_init(0, Domain_IP, 9004, g_send_buf, g_recv_buf);
+
+	httpc_init(0, Domain_IP, Ip_config_Server_Port, g_send_buf, g_recv_buf);
 }
 
 void ethernetHTTPRoutine(void)
@@ -333,11 +336,11 @@ void ethernetHTTPRoutine(void)
 #endif
 
 		length1 = sprintf(URI,"POST /powermeter?mid=%d&bid=2 HTTP/1.0\r\n"
-						"Host: isc2.power-meter.acceedo.in:9004\r\n"
+						"Host: isc2.power-meter.acceedo.in:%d\r\n"
 						"Accept: text/html\r\n"
 						"Content-Type: application/json \r\n"
 						"Content-Length: %d\r\n\r\n"
-						"[%c",Meter_Id,265,'"');
+						"[%c",Meter_Id,Ip_config_Server_Port,265,'"');
 		length2 =  sprintf(URI+length1,"%03d,%03d,%03d,%03d,%03d,%03d,%03d%,%03d,%03d,%03d,%03d,%03d,%03d,%03d,%03d,%03d%c",
 						  PowerMeterdatabase[Meter_Id-1].loc_datastore[0][0],PowerMeterdatabase[Meter_Id-1].loc_datastore[0][1],PowerMeterdatabase[Meter_Id-1].loc_datastore[0][2],PowerMeterdatabase[Meter_Id-1].loc_datastore[0][3],
 						  PowerMeterdatabase[Meter_Id-1].loc_datastore[0][4],PowerMeterdatabase[Meter_Id-1].loc_datastore[0][5],PowerMeterdatabase[Meter_Id-1].loc_datastore[0][6],PowerMeterdatabase[Meter_Id-1].loc_datastore[0][7],

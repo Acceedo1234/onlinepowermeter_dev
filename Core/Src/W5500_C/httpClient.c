@@ -51,6 +51,7 @@ uint32_t heatnumber;
 uint16_t rxType,furnace;
 uint16_t rxReqCarbon,rxReqSilica,rxReqMn,rxReqCu,rxReqSn,rxReqZn;
 extern uint8_t Meter_Id;
+extern uint8_t No_Of_Meter;
 /* Private functions prototypes ----------------------------------------------*/
 uint16_t get_httpc_any_port(void);
 /*
@@ -497,8 +498,8 @@ void receivehttpcheck(void)
 			pch = strtok (0,",");
 		}
 
-		Total_No_Of_Meter = 9;/*modify manual*/
-		if(Meter_Id_Rx == Total_No_Of_Meter)
+		//Total_No_Of_Meter = 9;/*modify manual*/
+		if(Meter_Id_Rx == No_Of_Meter)
 		{
 			Meter_Id =1;
 		}

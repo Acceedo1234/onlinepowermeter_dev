@@ -1,6 +1,6 @@
-Core/srccpp/main.o: ../Core/srccpp/main.cpp \
- D:/SourceTree/onlinepowermerter/Core/srccpp/BussinessLogic/ApplicationSW.h \
- ../Core/Inc/main.h ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h \
+Core/Src/Dwin/dwin_receive_decode.o: \
+ ../Core/Src/Dwin/dwin_receive_decode.c ../Core/Inc/main.h \
+ ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h \
  ../Core/Inc/stm32l4xx_hal_conf.h \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rcc.h \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_def.h \
@@ -32,15 +32,7 @@ Core/srccpp/main.o: ../Core/srccpp/main.cpp \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_tim_ex.h \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart.h \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart_ex.h \
- D:/SourceTree/onlinepowermerter/Core/srccpp/DisplayCPP/GLCD.h \
- D:/SourceTree/onlinepowermerter/Core/srccpp/Common/common.h \
- D:/SourceTree/onlinepowermerter/Core/srccpp/Modbus/Modbusrtu.h \
- D:/SourceTree/onlinepowermerter/Core/srccpp/DisplayCPP/DisplayRoutine.h \
- D:/SourceTree/onlinepowermerter/Core/srccpp/DisplayCPP/GLCD.h \
- D:/SourceTree/onlinepowermerter/Core/srccpp/OfflineStorage/OfflineStorage.h \
- D:/SourceTree/onlinepowermerter/Core/srccpp/WifiEsp8266/ESP8266.h \
- D:/SourceTree/onlinepowermerter/Core/srccpp/Shift/SHIFT.h
-D:/SourceTree/onlinepowermerter/Core/srccpp/BussinessLogic/ApplicationSW.h:
+ ../Core/Src/Dwin/dwin_receive_decode.h
 ../Core/Inc/main.h:
 ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h:
 ../Core/Inc/stm32l4xx_hal_conf.h:
@@ -74,11 +66,4 @@ D:/SourceTree/onlinepowermerter/Core/srccpp/BussinessLogic/ApplicationSW.h:
 ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_tim_ex.h:
 ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart.h:
 ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart_ex.h:
-D:/SourceTree/onlinepowermerter/Core/srccpp/DisplayCPP/GLCD.h:
-D:/SourceTree/onlinepowermerter/Core/srccpp/Common/common.h:
-D:/SourceTree/onlinepowermerter/Core/srccpp/Modbus/Modbusrtu.h:
-D:/SourceTree/onlinepowermerter/Core/srccpp/DisplayCPP/DisplayRoutine.h:
-D:/SourceTree/onlinepowermerter/Core/srccpp/DisplayCPP/GLCD.h:
-D:/SourceTree/onlinepowermerter/Core/srccpp/OfflineStorage/OfflineStorage.h:
-D:/SourceTree/onlinepowermerter/Core/srccpp/WifiEsp8266/ESP8266.h:
-D:/SourceTree/onlinepowermerter/Core/srccpp/Shift/SHIFT.h:
+../Core/Src/Dwin/dwin_receive_decode.h:

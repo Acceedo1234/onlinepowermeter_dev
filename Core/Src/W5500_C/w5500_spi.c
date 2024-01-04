@@ -313,7 +313,7 @@ void ethernetHTTPRoutine(void)
 		}
 #endif
 
-		length1 = sprintf(URI,"POST /powermeter?mid=%d&bid=1 HTTP/1.0\r\n"
+		length1 = sprintf(URI,"POST /powermeter?mid=%d&bid=2 HTTP/1.0\r\n"
 						"Host: isc2.power-meter.acceedo.in:9004\r\n"
 						"Accept: text/html\r\n"
 						"Content-Type: application/json \r\n"

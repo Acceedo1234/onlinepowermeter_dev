@@ -63,7 +63,7 @@ void cppMain()
 		if(Flag1Second)
 		{
 			Flag1Second=0;
-			displayRoutineInst.run();
+			ModbusInst.dwinFrame();
 			ethernetHTTPRoutine();
 		}
 	}

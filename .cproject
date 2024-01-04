@@ -58,6 +58,7 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/powermeter/Core/Src/W25Q64}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/powermeter/Core/Src/W5500_C}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/powermeter/Core/Src/api}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/powermeter/Core/Src/Dwin}&quot;"/>
 								</option>
 								<inputType id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.input.c.441910903" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.input.c"/>
 							</tool>

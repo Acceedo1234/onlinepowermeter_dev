@@ -7,23 +7,25 @@
 #include"main.h"
 #include "aco_generic_enumeration.h"
 #include "struct.h"
+#include"dwin_receive_decode.h"
 #include <string.h>
 
 extern UART_HandleTypeDef hlpuart1;
 extern UART_HandleTypeDef huart1;
+
 PowerMeterdata PowerMeterdatabase[16];
 uint8_t rxTempBuff[5];
-extern uint8_t u8rxbuf[255];
 uint8_t checkbuff[200];
 uint8_t refinc;
 uint8_t rxMeterId;
-extern uint8_t RxDatabuf[50];
-extern uint8_t modbustemp[3];
 uint8_t DataTrack=0;
 uint8_t TotalNoOfData;
 uint32_t carbonActWght,SilicaActWght,ManganeaseActWght,copperActWght,tinActWght,zincActWeight;
 uint8_t CountTrack;
 
+extern uint8_t RxDatabuf[50];
+extern uint8_t modbustemp[3];
+extern uint8_t u8rxbuf[255];
 extern uint8_t Rxseqdecoder;
 extern uint8_t Total_No_Of_Meter;
 extern uint8_t CurrentFrame;
@@ -34,8 +36,7 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
 {
 	if(huart == &hlpuart1)
 	{
-		ESPRxDecoder(rxTempBuff[0],Rxseqdecoder);
-
+		Dwin_Receive_Decode(rxTempBuff);
 		HAL_UART_Receive_IT(&hlpuart1,rxTempBuff,1);
 	}
 

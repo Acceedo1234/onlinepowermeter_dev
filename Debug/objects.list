@@ -1,3 +1,4 @@
+"./Core/Src/Dwin/dwin_receive_decode.o"
 "./Core/Src/ESP8266/esp8266.o"
 "./Core/Src/ESP8266/esp8266_rx.o"
 "./Core/Src/GLCD_clib.o"

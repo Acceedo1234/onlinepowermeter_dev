@@ -16,16 +16,27 @@
 #define STARTADDRESS 0x03
 #define NOOFDATA     0x02
 
+constexpr uint8_t START_BYTE_1=0x5A;
+constexpr uint8_t START_BYTE_2=0xA5;
+constexpr uint8_t multipleWriteRequestH = 0x0B;
+constexpr uint8_t multipleWriteRequestL = 0x82;
+constexpr uint8_t multipleReadRequestH = 0x04;
+constexpr uint8_t multipleReadRequestL = 0x83;
+
 extern uint16_t temperatureSetOL,temperaturehighSetOL,temperatureLowSetOL;
 extern uint8_t Total_No_Of_Meter;
+extern uint8_t Rx_Dwin_Point;
 extern struct ModbusRegValue MeterInfo[16];
 extern uint8_t RxDatabuf[50];
+extern uint8_t httpc_isConnected;
 
+uint8_t test;
 uint8_t u8ModbusReg[8];
 uint8_t Seqcntrl=0;
 uint8_t TxSeqComplete;
 uint8_t CurrentMeter=1;
 uint8_t CurrentFrame=1;
+uint8_t noOfDataDwin;
 uint16_t RxNoOfData;
 uint16_t Valid_No_Of_Data;
 
@@ -117,4 +128,61 @@ uint16_t Modbusrtu::ASCChecksum(uint8_t *ASCSrc, uint8_t NoOfBytes)
 
 	}
 	return (CRCRegHigh << 8 | CRCRegLow );
+}
+
+void Modbusrtu::dwinFrame(void)
+{
+	test=test+1;
+	switch(cntIdDwin)
+	{
+	case 0:
+		u8DwinRegister[0] = START_BYTE_1;
+		u8DwinRegister[1] = START_BYTE_2;
+		u8DwinRegister[2] = multipleWriteRequestH;
+		u8DwinRegister[3] = multipleWriteRequestL;
+		u8DwinRegister[4] = 0x20;
+		u8DwinRegister[5] = 0x00;
+		u8DwinRegister[6] = 0x00;
+		u8DwinRegister[7] = test;
+		u8DwinRegister[8] = 0;
+		u8DwinRegister[9] = httpc_isConnected;
+		u8DwinRegister[10] = 0;
+		u8DwinRegister[11] = 1;
+		noOfDataDwin=12;
+		cntIdDwin=1;
+	break;
+	case 1:
+		u8DwinRegister[0] = START_BYTE_1;
+		u8DwinRegister[1] = START_BYTE_2;
+		u8DwinRegister[2] = multipleWriteRequestH;
+		u8DwinRegister[3] = multipleWriteRequestL;
+		u8DwinRegister[4] = 0x20;
+		u8DwinRegister[5] = 0x00;
+		u8DwinRegister[6] = 0x00;
+		u8DwinRegister[7] = test;
+		u8DwinRegister[8] = 0;
+		u8DwinRegister[9] = httpc_isConnected;
+		u8DwinRegister[10] = 0;
+		u8DwinRegister[11] = 1;
+		noOfDataDwin=12;
+		cntIdDwin=2;
+	break;
+	case 2:
+		u8DwinRegister[0] = START_BYTE_1;
+		u8DwinRegister[1] = START_BYTE_2;
+		u8DwinRegister[2] = multipleReadRequestH;
+		u8DwinRegister[3] = multipleReadRequestL;
+		u8DwinRegister[4] = 0x30;
+		u8DwinRegister[5] = 0x00;
+		u8DwinRegister[6] = 0x16;
+		Rx_Dwin_Point=0;
+		noOfDataDwin=7;
+		cntIdDwin=0;
+	break;
+	default:
+		cntIdDwin=0;
+	break;
+	}
+	//out_read_rxint_set.Noofbytesrx = (_u16ReadQty*2)+5;
+	HAL_UART_Transmit_IT(&hlpuart1,u8DwinRegister,noOfDataDwin);
 }

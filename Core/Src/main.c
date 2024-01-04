@@ -93,6 +93,7 @@ uint8_t RxDatabuf[50];
 uint8_t modbustemp[3];
 
 extern uint8_t Meter_Id;
+extern uint8_t rxTempBuff[5];
 
 /* USER CODE END 0 */
 
@@ -158,6 +159,7 @@ int main(void)
 
   W25qxx_Init();
   HAL_UART_Receive_IT(&huart1,modbustemp,1);
+  HAL_UART_Receive_IT(&hlpuart1,rxTempBuff,1);
   //rtc_set_time(13,14,30);
   //rtc_set_date(2,20,2,23);
   while (1)
